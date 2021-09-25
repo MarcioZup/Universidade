@@ -7,5 +7,11 @@ public class Coordenadores extends Funcionarios{
         this.professoresSupervisionados = professoresSupervisionados;
     }
 
+    public int getProfessoresSupervisionados() {
+        return professoresSupervisionados;
+    }
 
+    public void setProfessoresSupervisionados(int professoresSupervisionados) {
+        this.professoresSupervisionados = professoresSupervisionados;
+    }
 }
