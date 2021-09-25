@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Coordenadores extends Funcionarios{
 
     private int professoresSupervisionados;
@@ -18,4 +21,11 @@ public class Coordenadores extends Funcionarios{
     public void aumentaSalario() {
         super.aumentaSalario(0.05) ;
     }
+
+    public void adicionaProfessor(String professorAdicionado){
+        List<String> professoresSupervisionados = new ArrayList<>();
+        professoresSupervisionados.add(professorAdicionado);
+    }
+
+
 }
