@@ -44,4 +44,8 @@ public class Professores extends Funcionarios {
     public void setQuantidadeDeTurmas(int quantidadeDeTurmas) {
         this.quantidadeDeTurmas = quantidadeDeTurmas;
     }
+
+    public void adicionaTurma(int numeroDeTurmas){
+        quantidadeDeTurmas += numeroDeTurmas;
+    }
 }

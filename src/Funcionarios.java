@@ -53,4 +53,9 @@ public class Funcionarios {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    public void aumentaSalario(double aumento){
+        aumento = 0.1;
+        this.salario += (salario * aumento);
+    }
 }

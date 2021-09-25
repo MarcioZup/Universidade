@@ -14,4 +14,8 @@ public class Coordenadores extends Funcionarios{
     public void setProfessoresSupervisionados(int professoresSupervisionados) {
         this.professoresSupervisionados = professoresSupervisionados;
     }
+
+    public void aumentaSalario() {
+        super.aumentaSalario(0.05) ;
+    }
 }
