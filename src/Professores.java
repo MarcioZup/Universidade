@@ -1,3 +1,3 @@
-public class Professores {
+public class Professores extends Funcionarios {
 
 }

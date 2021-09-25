@@ -1,2 +1,2 @@
-public class FuncionariosAdministrativos {
+public class FuncionariosAdministrativos extends Funcionarios{
 }

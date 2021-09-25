@@ -1,2 +1,2 @@
-public class Coordenadores {
+public class Coordenadores extends Funcionarios{
 }
