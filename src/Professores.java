@@ -4,13 +4,23 @@ public class Professores extends Funcionarios {
     private String disciplinaministrada;
     private int quantidadeDeAlunos;
     private int quantidadeDeTurmas;
+    private Turma turma;
 
-    public Professores(String nome, String cpf, int numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelDeGraducao, String disciplinaministrada, int quantidadeDeAlunos, int quantidadeDeTurmas) {
+    public Turma getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }
+
+   public Professores(String nome, String cpf, int numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelDeGraducao, String disciplinaministrada, int quantidadeDeAlunos, int quantidadeDeTurmas) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
         this.nivelDeGraducao = nivelDeGraducao;
         this.disciplinaministrada = disciplinaministrada;
         this.quantidadeDeAlunos = quantidadeDeAlunos;
         this.quantidadeDeTurmas = quantidadeDeTurmas;
+        this.turma = turma;
     }
 
     public String getNivelDeGraducao() {
@@ -48,4 +58,9 @@ public class Professores extends Funcionarios {
     public void adicionaTurma(int numeroDeTurmas){
         quantidadeDeTurmas += numeroDeTurmas;
     }
+
+
+
+
+
 }

@@ -3,29 +3,47 @@ import java.util.List;
 
 public class Coordenadores extends Funcionarios{
 
-    private int professoresSupervisionados;
+    private int maxProfSupervisionados;
+    private List<Integer> professoresSupervisionados = new ArrayList<>();
 
-    public Coordenadores(String nome, String cpf, int numeroDeRegistro, String orgaoDeLotacao, double salario, int professoresSupervisionados) {
+
+
+    public Coordenadores(String nome, String cpf, int numeroDeRegistro, String orgaoDeLotacao, double salario, double professoresSupervisionados, int maxProfSupervisionados) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
-        this.professoresSupervisionados = professoresSupervisionados;
+        this.maxProfSupervisionados = maxProfSupervisionados;
+
     }
 
-    public int getProfessoresSupervisionados() {
-        return professoresSupervisionados;
-    }
+    public void adicionaProfessor(int numeroDeRegistro){
+        boolean loop = true;
+        while (loop){
+            if ((professoresSupervisionados.size() >= getMaxProfSupervisionados())) {
+                System.out.println("Tamanho máximo alcançado");
+                professoresSupervisionados = professoresSupervisionados;
+            }else{
+                professoresSupervisionados.add(numeroDeRegistro);
+                loop = false;
+            }
+            break;
+        }
 
-    public void setProfessoresSupervisionados(int professoresSupervisionados) {
-        this.professoresSupervisionados = professoresSupervisionados;
-    }
+       }
+
 
     public void aumentaSalario() {
         super.aumentaSalario(0.05) ;
     }
 
-    public void adicionaProfessor(String professorAdicionado){
-        List<String> professoresSupervisionados = new ArrayList<>();
-        professoresSupervisionados.add(professorAdicionado);
+    public int getMaxProfSupervisionados() {
+        return maxProfSupervisionados;
     }
 
-
+    public List getProfessoresSupervisionados() {
+        if (professoresSupervisionados.isEmpty()){
+            System.out.println("Nenhum professor sendo supervisionado por esse coordenador");
+        }else{
+            System.out.println("Quantidade de professores supervisionados: ");
+        }
+        return professoresSupervisionados;
+    }
 }

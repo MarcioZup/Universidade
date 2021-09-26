@@ -2,7 +2,7 @@ public class Funcionarios {
 
     private String nome;
     private String cpf;
-    private int numeroDeRegistro;
+    public int numeroDeRegistro;
     private String orgaoDeLotacao;
     private double salario;
 
@@ -30,7 +30,7 @@ public class Funcionarios {
         this.cpf = cpf;
     }
 
-    public int getNumeroDeRegistro() {
+    public double getNumeroDeRegistro() {
         return numeroDeRegistro;
     }
 
